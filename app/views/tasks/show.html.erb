@@ -1,9 +1,9 @@
 <h2><%= @task.title %></h2>
 <p class="alert alert-secondary"><%= @task.details %></p>
 <% if @task.completed %>
-<i class="fa-regular fa-square-check"></i><p>This task is completed</p>
+<i class="fa-regular fa-square-check"></i> This task is completed
 <% else %>
-<i class="fa-regular fa-square"></i><p>This task is not yet completed</p>
+<i class="fa-regular fa-square"></i> This task is not yet completed
 <% end %>
 
 <%= link_to 'Edit task', edit_task_path %>

@@ -8,10 +8,13 @@
 <i class="fa-regular fa-square"></i>
 <% end %>
 <%= link_to task.title, task_path(task) %>
- · <i class="fa-regular fa-trash-can"> <%= link_to '.', task_path(task), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> </i>
- </li>
-
+<%= link_to task_path(task), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+<i class="fa-regular fa-trash-can"></i>
+<% end %>
+</li>
 <% end %>
 </ul>
 
-<%= link_to "Add new task", new_task_path %>
+<%= link_to new_task_path do %>
+  <i class="fa-solid fa-plus"></i> Add a new task
+<% end %>
