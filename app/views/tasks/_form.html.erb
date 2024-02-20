@@ -1,0 +1,30 @@
+<%= form_with model: task do |f| %>
+<div class="mb-3">
+
+<div class="form-label">
+<%= f.label :title %>
+</div>
+
+<div class="form-control">
+<%= f.text_field :title %>
+</div>
+
+<div class="form-label">
+<%= f.label :details %>
+</div>
+
+<div class="form-control">
+<%= f.text_field :details %>
+</div>
+
+<% unless f.object.new_record? %>
+<%= f.check_box :completed%>
+<%= f.label :completed %>
+<% end %>
+
+<div class="btn btn-primary">
+<%= f.submit %>
+</div>
+
+</div>
+<% end %>
